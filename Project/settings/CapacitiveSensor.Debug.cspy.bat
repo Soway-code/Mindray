@@ -25,7 +25,7 @@ if not "%~1" == "" goto debugFile
 
 @echo on 
 
-"C:\Program Files (x86)\IAR Systems\Embedded Workbench 8.1\common\bin\cspybat" -f "F:\信为产品\电容\迈瑞电容\Project\settings\CapacitiveSensor.Debug.general.xcl" --backend -f "F:\信为产品\电容\迈瑞电容\Project\settings\CapacitiveSensor.Debug.driver.xcl" 
+"D:\Embedded Workbench 8.1\common\bin\cspybat" -f "E:\project_repo\Mindray\Project\settings\CapacitiveSensor.Debug.general.xcl" --backend -f "E:\project_repo\Mindray\Project\settings\CapacitiveSensor.Debug.driver.xcl" 
 
 @echo off 
 goto end 
@@ -34,7 +34,7 @@ goto end
 
 @echo on 
 
-"C:\Program Files (x86)\IAR Systems\Embedded Workbench 8.1\common\bin\cspybat" -f "F:\信为产品\电容\迈瑞电容\Project\settings\CapacitiveSensor.Debug.general.xcl" "--debug_file=%~1" --backend -f "F:\信为产品\电容\迈瑞电容\Project\settings\CapacitiveSensor.Debug.driver.xcl" 
+"D:\Embedded Workbench 8.1\common\bin\cspybat" -f "E:\project_repo\Mindray\Project\settings\CapacitiveSensor.Debug.general.xcl" "--debug_file=%~1" --backend -f "E:\project_repo\Mindray\Project\settings\CapacitiveSensor.Debug.driver.xcl" 
 
 @echo off 
 :end
