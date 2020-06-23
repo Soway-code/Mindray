@@ -1,0 +1,735 @@
+###############################################################################
+#
+# IAR ELF Linker V8.30.1.114/W32 for ARM                  10/Jan/2020  08:41:06
+# Copyright 2007-2018 IAR Systems AB.
+#
+#    Output file  =  
+#        F:\信为产品\电容\迈瑞电容\Project\Debug\Exe\CapacitiveSensor.out
+#    Map file     =  
+#        F:\信为产品\电容\迈瑞电容\Project\Debug\List\CapacitiveSensor.map
+#    Command line =  
+#        -f C:\Users\李\AppData\Local\Temp\EW9A62.tmp
+#        (F:\信为产品\电容\迈瑞电容\Project\Debug\Obj\DataOutput.o
+#        F:\信为产品\电容\迈瑞电容\Project\Debug\Obj\main.o
+#        F:\信为产品\电容\迈瑞电容\Project\Debug\Obj\modbus.o
+#        F:\信为产品\电容\迈瑞电容\Project\Debug\Obj\modbus_ascii.o
+#        F:\信为产品\电容\迈瑞电容\Project\Debug\Obj\Picocap.o
+#        F:\信为产品\电容\迈瑞电容\Project\Debug\Obj\SoftSpi.o
+#        F:\信为产品\电容\迈瑞电容\Project\Debug\Obj\startup_stm32l072xx.o
+#        F:\信为产品\电容\迈瑞电容\Project\Debug\Obj\stm32l0_adc.o
+#        F:\信为产品\电容\迈瑞电容\Project\Debug\Obj\stm32l0_adc_app.o
+#        F:\信为产品\电容\迈瑞电容\Project\Debug\Obj\stm32l0_dac.o
+#        F:\信为产品\电容\迈瑞电容\Project\Debug\Obj\stm32l0_dac_app.o
+#        F:\信为产品\电容\迈瑞电容\Project\Debug\Obj\stm32l0_eeprom.o
+#        F:\信为产品\电容\迈瑞电容\Project\Debug\Obj\stm32l0_eeprom_app.o
+#        F:\信为产品\电容\迈瑞电容\Project\Debug\Obj\stm32l0_timer.o
+#        F:\信为产品\电容\迈瑞电容\Project\Debug\Obj\stm32l0_timer_app.o
+#        F:\信为产品\电容\迈瑞电容\Project\Debug\Obj\stm32l0_usart.o
+#        F:\信为产品\电容\迈瑞电容\Project\Debug\Obj\stm32l0_usart_app.o
+#        F:\信为产品\电容\迈瑞电容\Project\Debug\Obj\stm32l0xx_hal.o
+#        F:\信为产品\电容\迈瑞电容\Project\Debug\Obj\stm32l0xx_hal_adc.o
+#        F:\信为产品\电容\迈瑞电容\Project\Debug\Obj\stm32l0xx_hal_adc_ex.o
+#        F:\信为产品\电容\迈瑞电容\Project\Debug\Obj\stm32l0xx_hal_comp.o
+#        F:\信为产品\电容\迈瑞电容\Project\Debug\Obj\stm32l0xx_hal_comp_ex.o
+#        F:\信为产品\电容\迈瑞电容\Project\Debug\Obj\stm32l0xx_hal_cortex.o
+#        F:\信为产品\电容\迈瑞电容\Project\Debug\Obj\stm32l0xx_hal_crc.o
+#        F:\信为产品\电容\迈瑞电容\Project\Debug\Obj\stm32l0xx_hal_crc_ex.o
+#        F:\信为产品\电容\迈瑞电容\Project\Debug\Obj\stm32l0xx_hal_cryp.o
+#        F:\信为产品\电容\迈瑞电容\Project\Debug\Obj\stm32l0xx_hal_cryp_ex.o
+#        F:\信为产品\电容\迈瑞电容\Project\Debug\Obj\stm32l0xx_hal_dac.o
+#        F:\信为产品\电容\迈瑞电容\Project\Debug\Obj\stm32l0xx_hal_dac_ex.o
+#        F:\信为产品\电容\迈瑞电容\Project\Debug\Obj\stm32l0xx_hal_dma.o
+#        F:\信为产品\电容\迈瑞电容\Project\Debug\Obj\stm32l0xx_hal_firewall.o
+#        F:\信为产品\电容\迈瑞电容\Project\Debug\Obj\stm32l0xx_hal_flash.o
+#        F:\信为产品\电容\迈瑞电容\Project\Debug\Obj\stm32l0xx_hal_flash_ex.o
+#        F:\信为产品\电容\迈瑞电容\Project\Debug\Obj\stm32l0xx_hal_flash_ramfunc.o
+#        F:\信为产品\电容\迈瑞电容\Project\Debug\Obj\stm32l0xx_hal_gpio.o
+#        F:\信为产品\电容\迈瑞电容\Project\Debug\Obj\stm32l0xx_hal_i2c.o
+#        F:\信为产品\电容\迈瑞电容\Project\Debug\Obj\stm32l0xx_hal_i2c_ex.o
+#        F:\信为产品\电容\迈瑞电容\Project\Debug\Obj\stm32l0xx_hal_i2s.o
+#        F:\信为产品\电容\迈瑞电容\Project\Debug\Obj\stm32l0xx_hal_irda.o
+#        F:\信为产品\电容\迈瑞电容\Project\Debug\Obj\stm32l0xx_hal_iwdg.o
+#        F:\信为产品\电容\迈瑞电容\Project\Debug\Obj\stm32l0xx_hal_lcd.o
+#        F:\信为产品\电容\迈瑞电容\Project\Debug\Obj\stm32l0xx_hal_lptim.o
+#        F:\信为产品\电容\迈瑞电容\Project\Debug\Obj\stm32l0xx_hal_msp_template.o
+#        F:\信为产品\电容\迈瑞电容\Project\Debug\Obj\stm32l0xx_hal_pcd.o
+#        F:\信为产品\电容\迈瑞电容\Project\Debug\Obj\stm32l0xx_hal_pcd_ex.o
+#        F:\信为产品\电容\迈瑞电容\Project\Debug\Obj\stm32l0xx_hal_pwr.o
+#        F:\信为产品\电容\迈瑞电容\Project\Debug\Obj\stm32l0xx_hal_pwr_ex.o
+#        F:\信为产品\电容\迈瑞电容\Project\Debug\Obj\stm32l0xx_hal_rcc.o
+#        F:\信为产品\电容\迈瑞电容\Project\Debug\Obj\stm32l0xx_hal_rcc_ex.o
+#        F:\信为产品\电容\迈瑞电容\Project\Debug\Obj\stm32l0xx_hal_rng.o
+#        F:\信为产品\电容\迈瑞电容\Project\Debug\Obj\stm32l0xx_hal_rtc.o
+#        F:\信为产品\电容\迈瑞电容\Project\Debug\Obj\stm32l0xx_hal_rtc_ex.o
+#        F:\信为产品\电容\迈瑞电容\Project\Debug\Obj\stm32l0xx_hal_smartcard.o
+#        F:\信为产品\电容\迈瑞电容\Project\Debug\Obj\stm32l0xx_hal_smartcard_ex.o
+#        F:\信为产品\电容\迈瑞电容\Project\Debug\Obj\stm32l0xx_hal_smbus.o
+#        F:\信为产品\电容\迈瑞电容\Project\Debug\Obj\stm32l0xx_hal_spi.o
+#        F:\信为产品\电容\迈瑞电容\Project\Debug\Obj\stm32l0xx_hal_tim.o
+#        F:\信为产品\电容\迈瑞电容\Project\Debug\Obj\stm32l0xx_hal_tim_ex.o
+#        F:\信为产品\电容\迈瑞电容\Project\Debug\Obj\stm32l0xx_hal_tsc.o
+#        F:\信为产品\电容\迈瑞电容\Project\Debug\Obj\stm32l0xx_hal_uart.o
+#        F:\信为产品\电容\迈瑞电容\Project\Debug\Obj\stm32l0xx_hal_uart_ex.o
+#        F:\信为产品\电容\迈瑞电容\Project\Debug\Obj\stm32l0xx_hal_usart.o
+#        F:\信为产品\电容\迈瑞电容\Project\Debug\Obj\stm32l0xx_hal_wwdg.o
+#        F:\信为产品\电容\迈瑞电容\Project\Debug\Obj\stm32l0xx_it.o
+#        F:\信为产品\电容\迈瑞电容\Project\Debug\Obj\system_stm32l0xx.o
+#        F:\信为产品\电容\迈瑞电容\Project\Debug\Obj\TypeConvert.o
+#        F:\信为产品\电容\迈瑞电容\Project\Debug\Obj\User_Selection.o
+#        --no_out_extension -o
+#        F:\信为产品\电容\迈瑞电容\Project\Debug\Exe\CapacitiveSensor.out
+#        --map
+#        F:\信为产品\电容\迈瑞电容\Project\Debug\List\CapacitiveSensor.map
+#        --config
+#        F:\信为产品\电容\迈瑞电容\Project\CapacitiveSensor.icf
+#        --semihosting --entry __iar_program_start --vfe --text_out locale)
+#
+###############################################################################
+
+*******************************************************************************
+*** RUNTIME MODEL ATTRIBUTES
+***
+
+CppFlavor       = *
+__SystemLibrary = DLib
+__dlib_version  = 6
+
+
+*******************************************************************************
+*** HEAP SELECTION
+***
+
+The basic heap was selected because no calls to memory allocation
+functions were found in the application outside of system library
+functions, and there are calls to deallocation functions in the
+application.
+
+
+*******************************************************************************
+*** PLACEMENT SUMMARY
+***
+
+"A0":  place at 0x800'3000 { ro section .intvec };
+"P1":  place in [from 0x0 to 0x0] |
+                [from 0x800'3000 to 0x801'ffff] { ro };
+define block CSTACK with size = 1K, alignment = 8 { };
+define block HEAP with size = 2K, alignment = 8 { };
+"P3":  place in [from 0x0 to 0x0] |
+                [from 0x2000'0000 to 0x2000'4fff] {
+          rw, block CSTACK, block HEAP };
+initialize by copy { rw };
+
+No sections matched the following patterns:
+
+  ro section application_specific_ro  in "P2"
+  rw section application_specific_rw  in "P4"
+
+
+  Section            Kind         Address    Size  Object
+  -------            ----         -------    ----  ------
+"A0":                                        0xc0
+  .intvec            ro code   0x800'3000    0xc0  startup_stm32l072xx.o [1]
+                             - 0x800'30c0    0xc0
+
+"P1":                                      0x6668
+  .text              ro code   0x800'30c0  0x1ce0  modbus.o [1]
+  .text              ro code   0x800'4da0   0x374  modbus_ascii.o [1]
+  .text              ro code   0x800'5114    0xb0  FltMul.o [3]
+  .text              ro code   0x800'51c4    0x26  FltToU32.o [3]
+  .text              ro code   0x800'51ea     0x2  startup_stm32l072xx.o [1]
+  .text              ro code   0x800'51ec    0x3a  FltToS32.o [3]
+  .text              ro code   0x800'5226   0x120  FltAddSub.o [3]
+  .text              ro code   0x800'5346   0x158  TypeConvert.o [1]
+  .text              ro code   0x800'549e     0x2  startup_stm32l072xx.o [1]
+  .text              ro code   0x800'54a0   0x4fc  stm32l0_eeprom_app.o [1]
+  .text              ro code   0x800'599c    0xe6  stm32l0_eeprom.o [1]
+  .text              ro code   0x800'5a82     0x2  startup_stm32l072xx.o [1]
+  .text              ro code   0x800'5a84    0x36  IxxToFlt.o [3]
+  .text              ro code   0x800'5aba    0xaa  FltDiv.o [3]
+  .text              ro code   0x800'5b64    0x28  FltCmpGe.o [3]
+  .text              ro code   0x800'5b8c    0x26  FltCmpLe.o [3]
+  .text              ro code   0x800'5bb2     0x2  startup_stm32l072xx.o [1]
+  .text              ro code   0x800'5bb4   0x184  stm32l0_dac.o [1]
+  .text              ro code   0x800'5d38   0x218  SoftSpi.o [1]
+  .text              ro code   0x800'5f50    0xe0  I32DivModFast.o [4]
+  .text              ro code   0x800'6030   0x178  stm32l0_usart_app.o [1]
+  .text              ro code   0x800'61a8    0x6a  I64DivMod.o [4]
+  .text              ro code   0x800'6212     0x2  startup_stm32l072xx.o [1]
+  .text              ro code   0x800'6214    0x20  IxxToDbl.o [3]
+  .text              ro code   0x800'6234    0xc2  DblDiv.o [3]
+  .text              ro code   0x800'62f6    0x62  DblToFlt.o [3]
+  .text              ro code   0x800'6358    0xa4  stm32l0xx_hal_flash_ex.o [1]
+  .text              ro code   0x800'63fc    0xf8  stm32l0xx_hal_flash.o [1]
+  .text              ro code   0x800'64f4   0x25e  stm32l0xx_hal_gpio.o [1]
+  .text              ro code   0x800'6752     0x2  startup_stm32l072xx.o [1]
+  .text              ro code   0x800'6754    0x7a  stm32l0xx_hal_dac.o [1]
+  .text              ro code   0x800'67ce     0x2  startup_stm32l072xx.o [1]
+  .text              ro code   0x800'67d0     0x2  IntDivZer.o [4]
+  .text              ro code   0x800'67d2     0x2  startup_stm32l072xx.o [1]
+  .text              ro code   0x800'67d4   0x2c4  stm32l0_usart.o [1]
+  .text              ro code   0x800'6a98     0x2  I64DivZer.o [4]
+  .text              ro code   0x800'6a9a     0x2  startup_stm32l072xx.o [1]
+  .text              ro code   0x800'6a9c     0xc  stm32l0xx_hal.o [1]
+  .text              ro code   0x800'6aa8   0x52e  stm32l0xx_hal_uart.o [1]
+  .text              ro code   0x800'6fd6     0x2  startup_stm32l072xx.o [1]
+  .text              ro code   0x800'6fd8   0x118  stm32l0xx_hal_cortex.o [1]
+  .text              ro code   0x800'70f0   0x120  stm32l0xx_hal_rcc.o [1]
+  .text              ro code   0x800'7210   0x4e0  DataOutput.o [1]
+  .text              ro code   0x800'76f0   0x2b4  Picocap.o [1]
+  .text              ro code   0x800'79a4   0x28a  stm32l0xx_hal_tim.o [1]
+  .text              ro code   0x800'7c2e     0x2  startup_stm32l072xx.o [1]
+  .text              ro code   0x800'7c30    0x5c  ABImemcpy.o [4]
+  .text              ro code   0x800'7c8c    0x32  FltToDbl.o [3]
+  .text              ro code   0x800'7cbe    0x32  DblCmpLe.o [3]
+  .text              ro code   0x800'7cf0     0x2  stm32l0xx_hal_tim.o [1]
+  .text              ro code   0x800'7cf2     0x2  stm32l0xx_hal_tim.o [1]
+  .text              ro code   0x800'7cf4     0x2  stm32l0xx_hal_tim.o [1]
+  .text              ro code   0x800'7cf6     0x2  stm32l0xx_hal_tim.o [1]
+  .text              ro code   0x800'7cf8   0x4da  stm32l0xx_hal_adc.o [1]
+  .text              ro code   0x800'81d2     0x2  startup_stm32l072xx.o [1]
+  .text              ro code   0x800'81d4   0x1ce  stm32l0xx_hal_dma.o [1]
+  .text              ro code   0x800'83a2     0x2  stm32l0xx_hal_adc.o [1]
+  .text              ro code   0x800'83a4     0x2  stm32l0xx_hal_adc.o [1]
+  .text              ro code   0x800'83a6     0x2  stm32l0xx_hal_adc.o [1]
+  .text              ro code   0x800'83a8   0x450  stm32l0_adc.o [1]
+  .text              ro code   0x800'87f8   0x150  stm32l0xx_hal_adc_ex.o [1]
+  .rodata            const     0x800'8948   0x3b0  Picocap.o [1]
+  .text              ro code   0x800'8cf8   0x1b4  DblAddSub.o [3]
+  .text              ro code   0x800'8eac   0x1a8  stm32l0_adc_app.o [1]
+  .text              ro code   0x800'9054   0x16e  stm32l0xx_hal_iwdg.o [1]
+  .text              ro code   0x800'91c2     0x2  startup_stm32l072xx.o [1]
+  .text              ro code   0x800'91c4   0x11c  stm32l0_timer.o [1]
+  .text              ro code   0x800'92e0    0x74  main.o [1]
+  .text              ro code   0x800'9354    0x20  stm32l0xx_hal.o [1]
+  .text              ro code   0x800'9374    0x48  stm32l0_timer_app.o [1]
+  .text              ro code   0x800'93bc    0x5c  stm32l0_dac_app.o [1]
+  .text              ro code   0x800'9418    0x3c  User_Selection.o [1]
+  .text              ro code   0x800'9454    0x24  stm32l0xx_hal.o [1]
+  .text              ro code   0x800'9478     0x2  stm32l0xx_hal_msp_template.o [1]
+  .text              ro code   0x800'947a     0x2  startup_stm32l072xx.o [1]
+  .rodata            const     0x800'947c    0x58  stm32l0_eeprom_app.o [1]
+  .rodata            const     0x800'94d4    0x54  Picocap.o [1]
+  .text              ro code   0x800'9528    0x54  system_stm32l0xx.o [1]
+  .text              ro code   0x800'957c    0x3c  stm32l0xx_it.o [1]
+  .text              ro code   0x800'95b8    0x10  stm32l0xx_hal.o [1]
+  .text              ro code   0x800'95c8    0x3c  zero_init3.o [4]
+  .text              ro code   0x800'9604    0x30  copy_init3.o [4]
+  .text              ro code   0x800'9634    0x28  data_init.o [4]
+  .iar.init_table    const     0x800'965c    0x24  - Linker created -
+  .text              ro code   0x800'9680    0x1e  cmain.o [4]
+  .text              ro code   0x800'969e     0x4  low_level_init.o [2]
+  .text              ro code   0x800'96a2     0x8  exit.o [2]
+  .text              ro code   0x800'96aa     0x2  startup_stm32l072xx.o [1]
+  .text              ro code   0x800'96ac     0xa  cexit.o [4]
+  .text              ro code   0x800'96b6     0x2  startup_stm32l072xx.o [1]
+  .text              ro code   0x800'96b8    0x14  exit.o [5]
+  .text              ro code   0x800'96cc    0x10  startup_stm32l072xx.o [1]
+  .text              ro code   0x800'96dc     0xc  cstartup_M.o [4]
+  .rodata            const     0x800'96e8     0x8  stm32l0_eeprom_app.o [1]
+  .text              ro code   0x800'96f0     0x2  startup_stm32l072xx.o [1]
+  .text              ro code   0x800'96f2     0x2  startup_stm32l072xx.o [1]
+  .text              ro code   0x800'96f4     0x2  startup_stm32l072xx.o [1]
+  .text              ro code   0x800'96f6     0x2  startup_stm32l072xx.o [1]
+  .text              ro code   0x800'96f8     0x2  startup_stm32l072xx.o [1]
+  .text              ro code   0x800'96fa     0x2  startup_stm32l072xx.o [1]
+  .text              ro code   0x800'96fc     0x2  startup_stm32l072xx.o [1]
+  .text              ro code   0x800'96fe     0x2  startup_stm32l072xx.o [1]
+  .text              ro code   0x800'9700     0x2  startup_stm32l072xx.o [1]
+  .rodata            const     0x800'9702     0x0  zero_init3.o [4]
+  .rodata            const     0x800'9702     0x0  copy_init3.o [4]
+  Initializer bytes  const     0x800'9704    0x24  <for P3 s0>
+                             - 0x800'9728  0x6668
+
+"P3", part 1 of 3:                           0x24
+  P3 s0                       0x2000'0000    0x24  <Init block>
+    .data            inited   0x2000'0000    0x10  stm32l0xx_hal_rcc.o [1]
+    .data            inited   0x2000'0010     0xc  stm32l0xx_hal_rcc.o [1]
+    .data            inited   0x2000'001c     0x4  system_stm32l0xx.o [1]
+    .data            inited   0x2000'0020     0x1  modbus_ascii.o [1]
+                            - 0x2000'0024    0x24
+
+"P3", part 2 of 3:                          0x5e4
+  .bss               zero     0x2000'0024   0x140  DataOutput.o [1]
+  .bss               zero     0x2000'0164    0x78  modbus_ascii.o [1]
+  .bss               zero     0x2000'01dc    0x78  stm32l0_usart_app.o [1]
+  .bss               zero     0x2000'0254    0x78  stm32l0_usart_app.o [1]
+  .bss               zero     0x2000'02cc    0x70  stm32l0_usart_app.o [1]
+  .bss               zero     0x2000'033c    0x5c  stm32l0_adc_app.o [1]
+  .bss               zero     0x2000'0398    0x58  stm32l0_eeprom_app.o [1]
+  .bss               zero     0x2000'03f0    0x40  stm32l0_eeprom.o [1]
+  .bss               zero     0x2000'0430    0x3c  stm32l0_adc_app.o [1]
+  .bss               zero     0x2000'046c    0x38  stm32l0_timer_app.o [1]
+  .bss               zero     0x2000'04a4    0x30  DataOutput.o [1]
+  .bss               zero     0x2000'04d4    0x30  stm32l0_eeprom.o [1]
+  .bss               zero     0x2000'0504    0x28  DataOutput.o [1]
+  .bss               zero     0x2000'052c    0x28  stm32l0_adc.o [1]
+  .bss               zero     0x2000'0554    0x28  stm32l0_adc_app.o [1]
+  .bss               zero     0x2000'057c    0x1c  stm32l0_eeprom.o [1]
+  .bss               zero     0x2000'0598    0x18  stm32l0xx_hal_flash.o [1]
+  .bss               zero     0x2000'05b0    0x14  User_Selection.o [1]
+  .bss               zero     0x2000'05c4     0x8  stm32l0_eeprom.o [1]
+  .bss               zero     0x2000'05cc     0x4  DataOutput.o [1]
+  .bss               zero     0x2000'05d0     0x4  DataOutput.o [1]
+  .bss               zero     0x2000'05d4     0x4  DataOutput.o [1]
+  .bss               zero     0x2000'05d8     0x4  stm32l0_adc.o [1]
+  .bss               zero     0x2000'05dc     0x4  stm32l0xx_hal.o [1]
+  .bss               zero     0x2000'05e0     0x2  modbus.o [1]
+  .bss               zero     0x2000'05e2     0x2  modbus.o [1]
+  .bss               zero     0x2000'05e4     0x2  modbus.o [1]
+  .bss               zero     0x2000'05e6     0x2  modbus.o [1]
+  .bss               zero     0x2000'05e8     0x2  modbus.o [1]
+  .bss               zero     0x2000'05ea     0x2  modbus.o [1]
+  .bss               zero     0x2000'05ec     0x2  modbus.o [1]
+  .bss               zero     0x2000'05ee     0x2  modbus.o [1]
+  .bss               zero     0x2000'05f0     0x2  modbus.o [1]
+  .bss               zero     0x2000'05f2     0x2  modbus.o [1]
+  .bss               zero     0x2000'05f4     0x2  stm32l0_adc.o [1]
+  .bss               zero     0x2000'05f6     0x2  stm32l0_adc.o [1]
+  .bss               zero     0x2000'05f8     0x2  stm32l0_adc_app.o [1]
+  .bss               zero     0x2000'05fa     0x1  DataOutput.o [1]
+  .bss               zero     0x2000'05fb     0x1  DataOutput.o [1]
+  .bss               zero     0x2000'05fc     0x1  DataOutput.o [1]
+  .bss               zero     0x2000'05fd     0x1  DataOutput.o [1]
+  .bss               zero     0x2000'05fe     0x1  DataOutput.o [1]
+  .bss               zero     0x2000'05ff     0x1  DataOutput.o [1]
+  .bss               zero     0x2000'0600     0x1  main.o [1]
+  .bss               zero     0x2000'0601     0x1  modbus.o [1]
+  .bss               zero     0x2000'0602     0x1  modbus_ascii.o [1]
+  .bss               zero     0x2000'0603     0x1  stm32l0_usart_app.o [1]
+  .bss               zero     0x2000'0604     0x1  stm32l0_usart_app.o [1]
+                            - 0x2000'0605   0x5e1
+
+"P3", part 3 of 3:                          0x400
+  CSTACK                      0x2000'0608   0x400  <Block>
+    CSTACK           uninit   0x2000'0608   0x400  <Block tail>
+                            - 0x2000'0a08   0x400
+
+Unused ranges:
+
+         From           To      Size
+         ----           --      ----
+          0x0          0x0       0x1
+   0x800'9728   0x801'ffff  0x1'68d8
+  0x2000'0a08  0x2000'4fff    0x45f8
+
+
+*******************************************************************************
+*** INIT TABLE
+***
+
+          Address      Size
+          -------      ----
+Zero (__iar_zero_init3)
+    1 destination range, total size 0x5e1:
+          0x2000'0024  0x5e1
+
+Copy (__iar_copy_init3)
+    1 source range, total size 0x24 (109% of destination):
+           0x800'9704   0x24
+    1 destination range, total size 0x21:
+          0x2000'0000   0x21
+
+
+
+*******************************************************************************
+*** MODULE SUMMARY
+***
+
+    Module                        ro code  ro data  rw data
+    ------                        -------  -------  -------
+command line/config:
+    -------------------------------------------------------
+    Total:
+
+F:\信为产品\电容\迈瑞电容\Project\Debug\Obj: [1]
+    DataOutput.o                    1 248               426
+    Picocap.o                         692    1 028
+    SoftSpi.o                         536
+    TypeConvert.o                     344
+    User_Selection.o                   60                20
+    main.o                            116                 1
+    modbus.o                        7 392                21
+    modbus_ascii.o                    884        1      122
+    startup_stm32l072xx.o             258
+    stm32l0_adc.o                   1 104                48
+    stm32l0_adc_app.o                 424               194
+    stm32l0_dac.o                     388
+    stm32l0_dac_app.o                  92
+    stm32l0_eeprom.o                  230               148
+    stm32l0_eeprom_app.o            1 276       96       88
+    stm32l0_timer.o                   284
+    stm32l0_timer_app.o                72                56
+    stm32l0_usart.o                   708
+    stm32l0_usart_app.o               376               354
+    stm32l0xx_hal.o                    96                 4
+    stm32l0xx_hal_adc.o             1 248
+    stm32l0xx_hal_adc_ex.o            336
+    stm32l0xx_hal_cortex.o            280
+    stm32l0xx_hal_dac.o               122
+    stm32l0xx_hal_dma.o               462
+    stm32l0xx_hal_flash.o             248                24
+    stm32l0xx_hal_flash_ex.o          164
+    stm32l0xx_hal_gpio.o              606
+    stm32l0xx_hal_iwdg.o              366
+    stm32l0xx_hal_msp_template.o        2
+    stm32l0xx_hal_rcc.o               288       28       28
+    stm32l0xx_hal_tim.o               658
+    stm32l0xx_hal_uart.o            1 326
+    stm32l0xx_it.o                     60
+    system_stm32l0xx.o                 84        4        4
+    -------------------------------------------------------
+    Total:                         22 830    1 157    1 538
+
+dl6M_tln.a: [2]
+    exit.o                              8
+    low_level_init.o                    4
+    -------------------------------------------------------
+    Total:                             12
+
+m6M_tl.a: [3]
+    DblAddSub.o                       436
+    DblCmpLe.o                         50
+    DblDiv.o                          194
+    DblToFlt.o                         98
+    FltAddSub.o                       288
+    FltCmpGe.o                         40
+    FltCmpLe.o                         38
+    FltDiv.o                          170
+    FltMul.o                          176
+    FltToDbl.o                         50
+    FltToS32.o                         58
+    FltToU32.o                         38
+    IxxToDbl.o                         32
+    IxxToFlt.o                         54
+    -------------------------------------------------------
+    Total:                          1 722
+
+rt6M_tl.a: [4]
+    ABImemcpy.o                        92
+    I32DivModFast.o                   224
+    I64DivMod.o                       106
+    I64DivZer.o                         2
+    IntDivZer.o                         2
+    cexit.o                            10
+    cmain.o                            30
+    copy_init3.o                       48
+    cstartup_M.o                       12
+    data_init.o                        40
+    zero_init3.o                       60
+    -------------------------------------------------------
+    Total:                            626
+
+shb_l.a: [5]
+    exit.o                             20
+    -------------------------------------------------------
+    Total:                             20
+
+    Linker created                              41    1 024
+-----------------------------------------------------------
+    Grand Total:                   25 210    1 198    2 562
+
+
+*******************************************************************************
+*** ENTRY LIST
+***
+
+Entry                       Address   Size  Type      Object
+-----                       -------   ----  ----      ------
+.iar.init_table$$Base    0x800'965c          --   Gb  - Linker created -
+.iar.init_table$$Limit   0x800'9680          --   Gb  - Linker created -
+?main                    0x800'9681         Code  Gb  cmain.o [4]
+ADC1_COMP_IRQHandler     0x800'95a9    0x2  Code  Gb  stm32l0xx_it.o [1]
+ADC_Chn_Config           0x800'8ead   0x1c  Code  Gb  stm32l0_adc_app.o [1]
+ADC_DMAConvCplt          0x800'8161   0x10  Code  Lc  stm32l0xx_hal_adc.o [1]
+ADC_DMAError             0x800'817b   0x18  Code  Lc  stm32l0xx_hal_adc.o [1]
+ADC_DMAHalfConvCplt      0x800'8171    0xa  Code  Lc  stm32l0xx_hal_adc.o [1]
+ADC_DMA_Init             0x800'84f5  0x2a6  Code  Gb  stm32l0_adc.o [1]
+ADC_DelayMicroSecond     0x800'8193   0x22  Code  Lc  stm32l0xx_hal_adc.o [1]
+ADC_Enable               0x800'80c7   0x88  Code  Lc  stm32l0xx_hal_adc.o [1]
+ADC_GPIO_Config          0x800'83a9  0x148  Code  Gb  stm32l0_adc.o [1]
+ADC_GetChn_Value         0x800'8ec9   0x80  Code  Gb  stm32l0_adc_app.o [1]
+ADC_GetChn_Value::DMA_TC_Cnt
+                        0x2000'05f8    0x2  Data  Lc  stm32l0_adc_app.o [1]
+ADC_HandleInitStructure
+                        0x2000'033c   0x5c  Data  Gb  stm32l0_adc_app.o [1]
+ADC_TemperData_Handle    0x800'8f49   0xc2  Code  Gb  stm32l0_adc_app.o [1]
+APBAHBPrescTable        0x2000'0000   0x10  Data  Lc  stm32l0xx_hal_rcc.o [1]
+AutoUploadTimeConvert    0x800'4b71   0x2c  Code  Lc  modbus.o [1]
+CSTACK$$Base            0x2000'0608          --   Gb  - Linker created -
+CSTACK$$Limit           0x2000'0a08          --   Gb  - Linker created -
+Calib_ADHih             0x2000'05e4    0x2  Data  Gb  modbus.o [1]
+Calib_ADLow             0x2000'05e2    0x2  Data  Gb  modbus.o [1]
+Calib_ADMax             0x2000'05e6    0x2  Data  Gb  modbus.o [1]
+Calib_ADMin             0x2000'05e0    0x2  Data  Gb  modbus.o [1]
+Calib_CapDAHih          0x2000'05ec    0x2  Data  Gb  modbus.o [1]
+Calib_CapDALow          0x2000'05ea    0x2  Data  Gb  modbus.o [1]
+Calib_CapDAMax          0x2000'05ee    0x2  Data  Gb  modbus.o [1]
+Calib_CapDAMin          0x2000'05e8    0x2  Data  Gb  modbus.o [1]
+Calib_TempDAMax         0x2000'05f2    0x2  Data  Gb  modbus.o [1]
+Calib_TempDAMin         0x2000'05f0    0x2  Data  Gb  modbus.o [1]
+Cur_Param               0x2000'0398   0x58  Data  Gb  stm32l0_eeprom_app.o [1]
+DAC_Chn_Handle           0x800'93d1   0x40  Code  Gb  stm32l0_dac_app.o [1]
+DAC_Chn_Init             0x800'5bb5   0xa2  Code  Gb  stm32l0_dac.o [1]
+DAC_Chn_Selection        0x800'93bd   0x14  Code  Gb  stm32l0_dac_app.o [1]
+DAC_Chn_SetValue         0x800'5c57   0xd4  Code  Gb  stm32l0_dac.o [1]
+DMA1_Channel1_IRQHandler
+                         0x800'95ab    0x2  Code  Gb  stm32l0xx_it.o [1]
+DMA_ADC_HandleInitStructure
+                        0x2000'0430   0x3c  Data  Gb  stm32l0_adc_app.o [1]
+DMA_SetConfig            0x800'8383   0x20  Code  Lc  stm32l0xx_hal_dma.o [1]
+DataError               0x2000'05fe    0x1  Data  Gb  DataOutput.o [1]
+DataFilterAndOutput      0x800'728d  0x3f8  Code  Gb  DataOutput.o [1]
+DataFilterAndOutput::Ms100_Cycle
+                        0x2000'05ff    0x1  Data  Lc  DataOutput.o [1]
+DebugMon_Handler         0x800'9585    0x2  Code  Gb  stm32l0xx_it.o [1]
+Delay_us                 0x800'5e21   0x1a  Code  Gb  SoftSpi.o [1]
+EXTI4_15_IRQHandler      0x800'95ad    0xc  Code  Gb  stm32l0xx_it.o [1]
+Eeprom_Read_MultiBytes   0x800'5a57   0x2c  Code  Gb  stm32l0_eeprom.o [1]
+Eeprom_Read_OneByte      0x800'5a03    0xe  Code  Gb  stm32l0_eeprom.o [1]
+Eeprom_SystemParam_Check
+                         0x800'55f5   0xea  Code  Gb  stm32l0_eeprom_app.o [1]
+Eeprom_Write3T_MultiBytes
+                         0x800'5575   0x80  Code  Gb  stm32l0_eeprom_app.o [1]
+Eeprom_Write_MultiBytes
+                         0x800'5a1d   0x3a  Code  Gb  stm32l0_eeprom.o [1]
+Eeprom_Write_OneByte     0x800'599d   0x66  Code  Gb  stm32l0_eeprom.o [1]
+FLASH_SetErrorCode       0x800'646d   0x7a  Code  Lc  stm32l0xx_hal_flash.o [1]
+FLASH_WaitForLastOperation
+                         0x800'63fd   0x6e  Code  Gb  stm32l0xx_hal_flash.o [1]
+GetAverage               0x800'540f   0x40  Code  Gb  TypeConvert.o [1]
+GetDelExtremeAndAverage
+                         0x800'544f   0x24  Code  Gb  TypeConvert.o [1]
+GetFilterAverage         0x800'5473   0x2c  Code  Gb  TypeConvert.o [1]
+GetPCapResult            0x800'7211   0x60  Code  Gb  DataOutput.o [1]
+HAL_ADCEx_Calibration_GetValue
+                         0x800'88bb    0xc  Code  Gb  stm32l0xx_hal_adc_ex.o [1]
+HAL_ADCEx_Calibration_SetValue
+                         0x800'88c7   0x6e  Code  Gb  stm32l0xx_hal_adc_ex.o [1]
+HAL_ADCEx_Calibration_Start
+                         0x800'87f9   0xc2  Code  Gb  stm32l0xx_hal_adc_ex.o [1]
+HAL_ADCEx_EnableVREFINTTempSensor
+                         0x800'8935    0xc  Code  Gb  stm32l0xx_hal_adc_ex.o [1]
+HAL_ADC_ConfigChannel    0x800'7ff5   0xd2  Code  Gb  stm32l0xx_hal_adc.o [1]
+HAL_ADC_Init             0x800'7cf9  0x24a  Code  Gb  stm32l0xx_hal_adc.o [1]
+HAL_ADC_Start_DMA        0x800'7f59   0x9c  Code  Gb  stm32l0xx_hal_adc.o [1]
+HAL_DAC_ConfigChannel    0x800'677f   0x4a  Code  Gb  stm32l0xx_hal_dac.o [1]
+HAL_DAC_Init             0x800'6755   0x2a  Code  Gb  stm32l0xx_hal_dac.o [1]
+HAL_DMA_Init             0x800'81d5  0x112  Code  Gb  stm32l0xx_hal_dma.o [1]
+HAL_DMA_Start_IT         0x800'8321   0x62  Code  Gb  stm32l0xx_hal_dma.o [1]
+HAL_FLASHEx_DATAEEPROM_Lock
+                         0x800'6375    0xe  Code  Gb  stm32l0xx_hal_flash_ex.o [1]
+HAL_FLASHEx_DATAEEPROM_Program
+                         0x800'6383   0x62  Code  Gb  stm32l0xx_hal_flash_ex.o [1]
+HAL_FLASHEx_DATAEEPROM_Unlock
+                         0x800'6359   0x1c  Code  Gb  stm32l0xx_hal_flash_ex.o [1]
+HAL_GPIO_EXTI_IRQHandler
+                         0x800'6713   0x1e  Code  Gb  stm32l0xx_hal_gpio.o [1]
+HAL_GPIO_Init            0x800'64f5  0x1e4  Code  Gb  stm32l0xx_hal_gpio.o [1]
+HAL_GPIO_ReadPin         0x800'66e9   0x16  Code  Gb  stm32l0xx_hal_gpio.o [1]
+HAL_GPIO_WritePin        0x800'66ff   0x14  Code  Gb  stm32l0xx_hal_gpio.o [1]
+HAL_GetTick              0x800'6a9d    0xc  Code  Wk  stm32l0xx_hal.o [1]
+HAL_IWDG_Init            0x800'9055   0xa2  Code  Gb  stm32l0xx_hal_iwdg.o [1]
+HAL_IWDG_Refresh         0x800'9157   0x54  Code  Gb  stm32l0xx_hal_iwdg.o [1]
+HAL_IWDG_Start           0x800'90f7   0x60  Code  Gb  stm32l0xx_hal_iwdg.o [1]
+HAL_IncTick              0x800'95b9   0x10  Code  Wk  stm32l0xx_hal.o [1]
+HAL_Init                 0x800'9355   0x1a  Code  Gb  stm32l0xx_hal.o [1]
+HAL_MspInit              0x800'9479    0x2  Code  Gb  stm32l0xx_hal_msp_template.o [1]
+HAL_NVIC_DisableIRQ      0x800'70c3    0xa  Code  Gb  stm32l0xx_hal_cortex.o [1]
+HAL_NVIC_EnableIRQ       0x800'70b9    0xa  Code  Gb  stm32l0xx_hal_cortex.o [1]
+HAL_NVIC_SetPriority     0x800'70af    0xa  Code  Gb  stm32l0xx_hal_cortex.o [1]
+HAL_RCC_GetHCLKFreq      0x800'719d   0x1e  Code  Gb  stm32l0xx_hal_rcc.o [1]
+HAL_RCC_GetPCLK1Freq     0x800'71bb   0x18  Code  Gb  stm32l0xx_hal_rcc.o [1]
+HAL_RCC_GetPCLK2Freq     0x800'71d3   0x18  Code  Gb  stm32l0xx_hal_rcc.o [1]
+HAL_RCC_GetSysClockFreq
+                         0x800'70f1   0xac  Code  Gb  stm32l0xx_hal_rcc.o [1]
+HAL_SYSTICK_Config       0x800'70cd    0x8  Code  Gb  stm32l0xx_hal_cortex.o [1]
+HAL_TIM_Base_Init        0x800'79a5   0x32  Code  Gb  stm32l0xx_hal_tim.o [1]
+HAL_TIM_Base_Start_IT    0x800'7a01   0x1a  Code  Gb  stm32l0xx_hal_tim.o [1]
+HAL_TIM_Base_Stop        0x800'79d7   0x2a  Code  Gb  stm32l0xx_hal_tim.o [1]
+HAL_TIM_Base_Stop_IT     0x800'7a1b   0x2a  Code  Gb  stm32l0xx_hal_tim.o [1]
+HAL_TIM_IRQHandler       0x800'7a49  0x164  Code  Gb  stm32l0xx_hal_tim.o [1]
+HAL_TIM_PeriodElapsedCallback
+                         0x800'7695   0x38  Code  Gb  DataOutput.o [1]
+HAL_UART_Init            0x800'6aa9   0x70  Code  Gb  stm32l0xx_hal_uart.o [1]
+HardFault_Handler        0x800'957f    0x4  Code  Gb  stm32l0xx_it.o [1]
+HexToFloat               0x800'5347   0x16  Code  Gb  TypeConvert.o [1]
+HexToUlong               0x800'535d   0x16  Code  Gb  TypeConvert.o [1]
+IWDG_HandleStructure    0x2000'05b0   0x14  Data  Gb  User_Selection.o [1]
+LFilterCnt              0x2000'05fd    0x1  Data  Gb  DataOutput.o [1]
+LiquidStableFlag        0x2000'05fa    0x1  Data  Gb  DataOutput.o [1]
+MBASCII_Fun03            0x800'3139  0x1f2  Code  Gb  modbus.o [1]
+MBASCII_Fun04            0x800'3349  0x1d0  Code  Gb  modbus.o [1]
+MBASCII_Fun05            0x800'3539  0x1f4  Code  Gb  modbus.o [1]
+MBASCII_Fun10            0x800'377d  0x3e8  Code  Gb  modbus.o [1]
+MBASCII_Fun25            0x800'3b85  0x2c8  Code  Gb  modbus.o [1]
+MBASCII_Fun26            0x800'3e75  0x1b6  Code  Gb  modbus.o [1]
+MBASCII_Fun27            0x800'4061  0x25a  Code  Gb  modbus.o [1]
+MBASCII_Fun2A            0x800'42d9  0x1ba  Code  Gb  modbus.o [1]
+MBASCII_Fun2B            0x800'44b5  0x360  Code  Gb  modbus.o [1]
+MBASCII_Fun41            0x800'4821   0xbc  Code  Gb  modbus.o [1]
+MBASCII_Function         0x800'48e9   0xf4  Code  Gb  modbus.o [1]
+MBASCII_GetFunCode       0x800'30d7    0x4  Code  Gb  modbus.o [1]
+MBASCII_GetSlaveAddr     0x800'30d3    0x4  Code  Gb  modbus.o [1]
+MBASCII_SendErr          0x800'30f7   0x30  Code  Gb  modbus.o [1]
+MBASCII_SendMsg          0x800'30db   0x1c  Code  Gb  modbus.o [1]
+MBASCII_SendMsg_NoLimit
+                         0x800'3127   0x12  Code  Gb  modbus.o [1]
+MB_CapAD_Calibration     0x800'4bcd   0x8c  Code  Gb  modbus.o [1]
+MB_CapDAOut_Calibration
+                         0x800'4c6d   0x8a  Code  Gb  modbus.o [1]
+MB_TempDAOut_Calibration
+                         0x800'4d01   0x5e  Code  Gb  modbus.o [1]
+MODBUS_ASCII_AsciiPacketToRtuPacket
+                         0x800'4e87   0x54  Code  Gb  modbus_ascii.o [1]
+MODBUS_ASCII_AsciiToHex
+                         0x800'4de3   0x50  Code  Gb  modbus_ascii.o [1]
+MODBUS_ASCII_CheckAscii
+                         0x800'4fc5   0x56  Code  Gb  modbus_ascii.o [1]
+MODBUS_ASCII_GetLrc      0x800'4e33   0x54  Code  Gb  modbus_ascii.o [1]
+MODBUS_ASCII_HandlRevData
+                         0x800'4f13   0xb2  Code  Gb  modbus_ascii.o [1]
+MODBUS_ASCII_HexToAscii
+                         0x800'4da1   0x42  Code  Gb  modbus_ascii.o [1]
+MODBUS_ASCII_RecvData    0x800'501b   0x7a  Code  Gb  modbus_ascii.o [1]
+MODBUS_ASCII_RtuPacketToAsciiPacket
+                         0x800'4edb   0x38  Code  Gb  modbus_ascii.o [1]
+MODBUS_ASCII_SendData    0x800'5095   0x6a  Code  Gb  modbus_ascii.o [1]
+ModbusAutoUpload         0x800'49f5  0x174  Code  Gb  modbus.o [1]
+NMI_Handler              0x800'957d    0x2  Code  Gb  stm32l0xx_it.o [1]
+NVIC_DisableIRQ          0x800'6fe7    0xe  Code  Lc  stm32l0xx_hal_cortex.o [1]
+NVIC_EnableIRQ           0x800'6fd9    0xe  Code  Lc  stm32l0xx_hal_cortex.o [1]
+NVIC_SetPriority         0x800'6ff5   0x8a  Code  Lc  stm32l0xx_hal_cortex.o [1]
+NVIC_SystemReset         0x800'30c1   0x12  Code  Lc  modbus.o [1]
+PCapAvg_FrontOneSec     0x2000'05d0    0x4  Data  Gb  DataOutput.o [1]
+PCapDataOutFlag         0x2000'05fc    0x1  Data  Gb  DataOutput.o [1]
+PCapData_OneSec         0x2000'05cc    0x4  Data  Gb  DataOutput.o [1]
+PCapFilterData          0x2000'05d4    0x4  Data  Gb  DataOutput.o [1]
+PCapHFilterBuf          0x2000'04a4   0x30  Data  Gb  DataOutput.o [1]
+PCapLFilterBuf          0x2000'0024  0x140  Data  Gb  DataOutput.o [1]
+PCapResBuf              0x2000'0504   0x28  Data  Gb  DataOutput.o [1]
+PCap_Enable              0x800'77e1   0x32  Code  Gb  Picocap.o [1]
+PCap_Init                0x800'76f1   0x5a  Code  Gb  Picocap.o [1]
+PCap_Measure             0x800'77af   0x32  Code  Gb  Picocap.o [1]
+PCap_PTL_Reset           0x800'777d   0x32  Code  Gb  Picocap.o [1]
+PCap_Reg_Config          0x800'78d5   0x4a  Code  Gb  Picocap.o [1]
+PCap_Res_Capacitance     0x800'7969   0x3c  Code  Gb  Picocap.o [1]
+PCap_Res_Sta             0x800'792d   0x3c  Code  Gb  Picocap.o [1]
+PCap_Reset               0x800'774b   0x32  Code  Gb  Picocap.o [1]
+PCap_WR_SRAM             0x800'7813   0xc2  Code  Gb  Picocap.o [1]
+PLLMulTable             0x2000'0010    0xc  Data  Lc  stm32l0xx_hal_rcc.o [1]
+PendSV_Handler           0x800'9587    0x2  Code  Gb  stm32l0xx_it.o [1]
+ProcFlash               0x2000'0598   0x18  Data  Gb  stm32l0xx_hal_flash.o [1]
+ProductParam            0x2000'04d4   0x30  Data  Gb  stm32l0_eeprom.o [1]
+REG                      0x800'94d4   0x54  Data  Gb  Picocap.o [1]
+RcvBuf                  0x2000'0254   0x78  Data  Gb  stm32l0_usart_app.o [1]
+Read_Device_Param        0x800'56e9  0x296  Code  Gb  stm32l0_eeprom_app.o [1]
+Region$$Table$$Base      0x800'965c          --   Gb  - Linker created -
+Region$$Table$$Limit     0x800'9680          --   Gb  - Linker created -
+RunVarParam             0x2000'03f0   0x40  Data  Gb  stm32l0_eeprom.o [1]
+SPI_Bit_Clr              0x800'5deb   0x36  Code  Gb  SoftSpi.o [1]
+SPI_Bit_Set              0x800'5db5   0x36  Code  Gb  SoftSpi.o [1]
+SPI_Init                 0x800'5d39   0x7c  Code  Gb  SoftSpi.o [1]
+SPI_Receive_24Bit        0x800'5e89   0x4c  Code  Gb  SoftSpi.o [1]
+SPI_Receive_8Bit         0x800'5e3b   0x4e  Code  Gb  SoftSpi.o [1]
+SPI_Send_16Bit           0x800'5f09   0x24  Code  Gb  SoftSpi.o [1]
+SPI_Send_32Bit           0x800'5f2d   0x24  Code  Gb  SoftSpi.o [1]
+SPI_Send_8Bit            0x800'5ee5   0x24  Code  Gb  SoftSpi.o [1]
+SRAM_DATA                0x800'8948  0x3b0  Data  Gb  Picocap.o [1]
+SVC_Handler              0x800'9583    0x2  Code  Gb  stm32l0xx_it.o [1]
+SenBuf                  0x2000'01dc   0x78  Data  Gb  stm32l0_usart_app.o [1]
+SenBufLen               0x2000'0603    0x1  Data  Gb  stm32l0_usart_app.o [1]
+SendLen                 0x2000'0601    0x1  Data  Gb  modbus.o [1]
+SensorEvent              0x800'4b9d   0x2c  Code  Gb  modbus.o [1]
+SensorSoftVersion        0x800'96e8    0x8  Data  Gb  stm32l0_eeprom_app.o [1]
+SortArrayExtreme         0x800'5373   0x9c  Code  Gb  TypeConvert.o [1]
+SwitchCurFilter          0x800'54a1   0xd4  Code  Gb  stm32l0_eeprom_app.o [1]
+SysTick_Config           0x800'707f   0x30  Code  Lc  stm32l0xx_hal_cortex.o [1]
+SysTick_Handler          0x800'9589    0x8  Code  Gb  stm32l0xx_it.o [1]
+SystemCoreClock         0x2000'001c    0x4  Data  Gb  system_stm32l0xx.o [1]
+SystemInit               0x800'9529   0x34  Code  Gb  system_stm32l0xx.o [1]
+TIM2_HandleInitStruct   0x2000'046c   0x38  Data  Gb  stm32l0_timer_app.o [1]
+TIM2_IRQHandler          0x800'9599    0xa  Code  Gb  stm32l0xx_it.o [1]
+TIM_Base_SetConfig       0x800'7bad   0x70  Code  Lc  stm32l0xx_hal_tim.o [1]
+Temp130_Vref_Adc        0x2000'05f6    0x2  Data  Gb  stm32l0_adc.o [1]
+Temp30_Vref_Adc         0x2000'05f4    0x2  Data  Gb  stm32l0_adc.o [1]
+TempVarySlope           0x2000'05d8    0x4  Data  Gb  stm32l0_adc.o [1]
+TimerCycleFlag          0x2000'05fb    0x1  Data  Gb  DataOutput.o [1]
+UART1_ISR_Handle         0x800'6169   0x1e  Code  Gb  stm32l0_usart_app.o [1]
+UART1_SendData           0x800'610d   0x5c  Code  Gb  stm32l0_usart_app.o [1]
+UART_AdvFeatureConfig    0x800'6dd5   0xde  Code  Gb  stm32l0xx_hal_uart.o [1]
+UART_CheckIdleState      0x800'6d63   0x54  Code  Gb  stm32l0xx_hal_uart.o [1]
+UART_HandleStruct       0x2000'02cc   0x70  Data  Gb  stm32l0_usart_app.o [1]
+UART_SetConfig           0x800'6b1d  0x246  Code  Gb  stm32l0xx_hal_uart.o [1]
+UART_WaitOnFlagUntilTimeout
+                         0x800'6eb9   0xe2  Code  Gb  stm32l0xx_hal_uart.o [1]
+USART1_IRQHandler        0x800'9591    0x8  Code  Gb  stm32l0xx_it.o [1]
+UsartParam              0x2000'05c4    0x8  Data  Gb  stm32l0_eeprom.o [1]
+UsartRecvOk             0x2000'0604    0x1  Data  Gb  stm32l0_usart_app.o [1]
+UserParam               0x2000'057c   0x1c  Data  Gb  stm32l0_eeprom.o [1]
+User_Default_Param       0x800'947c   0x58  Data  Gb  stm32l0_eeprom_app.o [1]
+User_Iwdg_Feed           0x800'9441    0xa  Code  Gb  User_Selection.o [1]
+User_Iwdg_Init           0x800'9419   0x28  Code  Gb  User_Selection.o [1]
+__aeabi_cdcmple          0x800'7cbf         Code  Gb  DblCmpLe.o [3]
+__aeabi_cfcmple          0x800'5b8d         Code  Gb  FltCmpLe.o [3]
+__aeabi_cfrcmple         0x800'5b65         Code  Gb  FltCmpGe.o [3]
+__aeabi_d2f              0x800'62f7         Code  Gb  DblToFlt.o [3]
+__aeabi_dadd             0x800'8cf9         Code  Gb  DblAddSub.o [3]
+__aeabi_ddiv             0x800'6235         Code  Gb  DblDiv.o [3]
+__aeabi_dsub             0x800'8dbf         Code  Gb  DblAddSub.o [3]
+__aeabi_f2d              0x800'7c8d         Code  Gb  FltToDbl.o [3]
+__aeabi_f2iz             0x800'51ed         Code  Gb  FltToS32.o [3]
+__aeabi_f2uiz            0x800'51c5         Code  Gb  FltToU32.o [3]
+__aeabi_fadd             0x800'5227         Code  Gb  FltAddSub.o [3]
+__aeabi_fdiv             0x800'5abb         Code  Gb  FltDiv.o [3]
+__aeabi_fmul             0x800'5115         Code  Gb  FltMul.o [3]
+__aeabi_fsub             0x800'5297         Code  Gb  FltAddSub.o [3]
+__aeabi_i2f              0x800'5aa5         Code  Gb  IxxToFlt.o [3]
+__aeabi_idiv             0x800'5f7d         Code  Gb  I32DivModFast.o [4]
+__aeabi_idiv0            0x800'67d1         Code  Gb  IntDivZer.o [4]
+__aeabi_idivmod          0x800'5f7d         Code  Gb  I32DivModFast.o [4]
+__aeabi_ldiv0            0x800'6a99         Code  Gb  I64DivZer.o [4]
+__aeabi_memcpy           0x800'7c31         Code  Gb  ABImemcpy.o [4]
+__aeabi_ui2d             0x800'6215         Code  Gb  IxxToDbl.o [3]
+__aeabi_ui2f             0x800'5a85         Code  Gb  IxxToFlt.o [3]
+__aeabi_uidiv            0x800'5f83         Code  Gb  I32DivModFast.o [4]
+__aeabi_uidivmod         0x800'5f83         Code  Gb  I32DivModFast.o [4]
+__aeabi_uldivmod         0x800'61a9         Code  Gb  I64DivMod.o [4]
+__cmain                  0x800'9681         Code  Gb  cmain.o [4]
+__exit                   0x800'96b9   0x14  Code  Gb  exit.o [5]
+__iar_copy_init3         0x800'9605   0x30  Code  Gb  copy_init3.o [4]
+__iar_data_init3         0x800'9635   0x28  Code  Gb  data_init.o [4]
+__iar_program_start      0x800'96dd         Code  Gb  cstartup_M.o [4]
+__iar_zero_init3         0x800'95c9   0x3c  Code  Gb  zero_init3.o [4]
+__low_level_init         0x800'969f    0x4  Code  Gb  low_level_init.o [2]
+__vector_table           0x800'3000         Data  Gb  startup_stm32l072xx.o [1]
+_call_main               0x800'968d         Code  Gb  cmain.o [4]
+_exit                    0x800'96ad         Code  Gb  cexit.o [4]
+_main                    0x800'969b         Code  Gb  cmain.o [4]
+cnt                     0x2000'0600    0x1  Data  Gb  main.o [1]
+cyAsciiBuff             0x2000'0164   0x78  Data  Gb  modbus_ascii.o [1]
+exit                     0x800'96a3    0x8  Code  Gb  exit.o [2]
+gADC_GetData            0x2000'052c   0x28  Data  Gb  stm32l0_adc.o [1]
+gTim2Config              0x800'9375   0x3a  Code  Gb  stm32l0_timer_app.o [1]
+gTimPeriodConfig         0x800'91c5  0x11c  Code  Gb  stm32l0_timer.o [1]
+gUart1_Config            0x800'6031   0xdc  Code  Gb  stm32l0_usart_app.o [1]
+gUart_Gpio_Config        0x800'67d5  0x1c0  Code  Gb  stm32l0_usart.o [1]
+gUart_Param_Init         0x800'699d   0xe4  Code  Gb  stm32l0_usart.o [1]
+g_cyRevBufffLen         0x2000'0602    0x1  Data  Lc  modbus_ascii.o [1]
+g_cyRevState            0x2000'0020    0x1  Data  Lc  modbus_ascii.o [1]
+main                     0x800'92e1   0x6a  Code  Gb  main.o [1]
+uADC_GetResult          0x2000'0554   0x28  Data  Gb  stm32l0_adc_app.o [1]
+uwTick                  0x2000'05dc    0x4  Data  Lc  stm32l0xx_hal.o [1]
+
+
+[1] = F:\信为产品\电容\迈瑞电容\Project\Debug\Obj
+[2] = dl6M_tln.a
+[3] = m6M_tl.a
+[4] = rt6M_tl.a
+[5] = shb_l.a
+
+  25 210 bytes of readonly  code memory
+   1 198 bytes of readonly  data memory
+   2 562 bytes of readwrite data memory
+
+Errors: none
+Warnings: none
