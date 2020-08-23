@@ -329,35 +329,35 @@ void MBASCII_Fun04(void)
             break;  
             
         case 0x0E:
-            Data_Buf = (uint32_t)HexToUlong(&Cur_Param[CAPMIN1 + 8]);           //介质2零点电容     
+            Data_Buf = (uint32_t)HexToUlong(&Cur_Param[CAPMIN2]);           //介质2零点电容     
             break; 
             
         case 0x10:
-            Data_Buf = (uint32_t)HexToUlong(&Cur_Param[CAPMAX1 + 8]);           //介质2满点电容              
+            Data_Buf = (uint32_t)HexToUlong(&Cur_Param[CAPMAX2]);           //介质2满点电容              
             break;
             
         case 0x12:
-            Data_Buf = (uint32_t)HexToUlong(&Cur_Param[CAPMIN1 + 16]);           //介质3零点电容     
+            Data_Buf = (uint32_t)HexToUlong(&Cur_Param[CAPMIN3]);           //介质3零点电容     
             break; 
             
         case 0x14:
-            Data_Buf = (uint32_t)HexToUlong(&Cur_Param[CAPMAX1 + 16]);           //介质3满点电容              
+            Data_Buf = (uint32_t)HexToUlong(&Cur_Param[CAPMAX3]);           //介质3满点电容              
             break;
             
         case 0x16:
-            Data_Buf = (uint32_t)HexToUlong(&Cur_Param[CAPMIN1 + 24]);           //介质4零点电容     
+            Data_Buf = (uint32_t)HexToUlong(&Cur_Param[CAPMIN4]);           //介质4零点电容     
             break; 
             
         case 0x18:
-            Data_Buf = (uint32_t)HexToUlong(&Cur_Param[CAPMAX1 + 24]);           //介质4满点电容              
+            Data_Buf = (uint32_t)HexToUlong(&Cur_Param[CAPMAX4]);           //介质4满点电容              
             break;
 
         case 0x1A:
-            Data_Buf = (uint32_t)HexToUlong(&Cur_Param[CAPMIN1 + 32]);           //介质5零点电容     
+            Data_Buf = (uint32_t)HexToUlong(&Cur_Param[CAPMIN5]);           //介质5零点电容     
             break; 
             
         case 0x1C:
-            Data_Buf = (uint32_t)HexToUlong(&Cur_Param[CAPMAX1 + 32]);           //介质5满点电容              
+            Data_Buf = (uint32_t)HexToUlong(&Cur_Param[CAPMAX5]);           //介质5满点电容              
             break;                  
             
         case 0x1E:
@@ -411,7 +411,7 @@ void MBASCII_Fun05(void)
         return;
     }
     //如果Flash写禁止且与Flash开关操作无关
-    if((ReadAdrL != ASCII_SINGLE_COIL_ADDR_END) && (ProductParam.EepromWrEn == EEPROM_WR_DISABLE))
+    if((ReadAdrL != 0x53) && (ProductParam.EepromWrEn == EEPROM_WR_DISABLE))
     {
         //返回访问设备失败错误
         MBASCII_SendErr(MB_EX_SLAVE_DEVICE_FAILURE);
@@ -437,24 +437,25 @@ void MBASCII_Fun05(void)
                 ProductParam.CapMax = RunVarParam.CapBak;
                 RunVarParam.CalibFlag |= CALIB_CAPMAX_FLAG;
             }
-            if(CALIB_CAPEOC_FLAG == RunVarParam.CalibFlag)                      //高低液位值都得到了
+            if((CALIB_CAPMAX_FLAG | CALIB_CAPMIN_FLAG) == (RunVarParam.CalibFlag & (CALIB_CAPMAX_FLAG | CALIB_CAPMIN_FLAG)))                      //高低液位值都得到了
             {
                 if(ProductParam.CapMin < ProductParam.CapMax)
                 {
-                    AddrOffset = (UserParam.LiquidType - 1) * 8;                //地址随液体类型偏移
+                    AddrOffset = (UserParam.LiquidType - 1) * 16;                //地址随液体类型偏移
                     for(i = 0; i < 4; i ++)
                     {                                                           //放入缓存
                         Cur_Param[CAPMIN1 + AddrOffset + i] = (uint8_t)(ProductParam.CapMin >> (3 - i) * 8);
                         Cur_Param[CAPMAX1 + AddrOffset + i] = (uint8_t)(ProductParam.CapMax >> (3 - i) * 8);
                     }                                                           //写进EEPROM，获得电容量程
-                    Eeprom_Write3T_MultiBytes(CAPMIN1 + AddrOffset, (uint8_t const *)&Cur_Param[CAPMIN1 + AddrOffset], 8);
+                    Eeprom_Write3T_MultiBytes(CAPMIN1 + AddrOffset, (uint8_t const *)&Cur_Param[CAPMIN1 + AddrOffset], 4);
+                    Eeprom_Write3T_MultiBytes(CAPMAX1 + AddrOffset, (uint8_t const *)&Cur_Param[CAPMAX1 + AddrOffset], 4);
                     ProductParam.CapRange = ProductParam.CapMax - ProductParam.CapMin;
-                    RunVarParam.CalibFlag = CALIB_CLEAR;
+                    RunVarParam.CalibFlag &= ~(CALIB_CAPMAX_FLAG | CALIB_CAPMIN_FLAG);
                 }
                 else
                 {
                     MBASCII_SendErr(MB_EX_CALIBRATION_ERR);
-                    RunVarParam.CalibFlag = CALIB_CLEAR;
+                    RunVarParam.CalibFlag &= ~(CALIB_CAPMAX_FLAG | CALIB_CAPMIN_FLAG);
                     return;
                 }
             }
@@ -490,6 +491,40 @@ void MBASCII_Fun05(void)
             else
             {
                 ProductParam.EepromWrEn = EEPROM_WR_DISABLE;//Flash写禁止
+            }
+            break;
+            
+        case 0x54:
+            if((RcvBuf[4] == 0x00) && (RcvBuf[5] == 0x00))                      //标定下刻度液位
+            {
+                ProductParam.CapLow = RunVarParam.CapBak;
+                RunVarParam.CalibFlag |= CALIB_CAPLOW_FLAG;
+            }
+            else if((RcvBuf[4] == 0xFF) && (RcvBuf[5] == 0x00))                 //标定上刻度液位
+            {
+                ProductParam.CapHigh = RunVarParam.CapBak;
+                RunVarParam.CalibFlag |= CALIB_CAPHIGH_FLAG;
+            }
+            if((CALIB_CAPLOW_FLAG | CALIB_CAPHIGH_FLAG) == (RunVarParam.CalibFlag & (CALIB_CAPLOW_FLAG | CALIB_CAPHIGH_FLAG)))                      //上/下刻度液位值都得到了
+            {
+                if(ProductParam.CapLow < ProductParam.CapHigh)
+                {
+                    AddrOffset = (UserParam.LiquidType - 1) * 16;                //地址随液体类型偏移
+                    for(i = 0; i < 4; i ++)
+                    {                                                           //放入缓存
+                        Cur_Param[CAPLOW1 + AddrOffset + i] = (uint8_t)(ProductParam.CapLow >> (3 - i) * 8);
+                        Cur_Param[CAPHIGH1 + AddrOffset + i] = (uint8_t)(ProductParam.CapHigh >> (3 - i) * 8);
+                    }                                                           //写进EEPROM，获得电容量程
+                    Eeprom_Write3T_MultiBytes(CAPLOW1 + AddrOffset, (uint8_t const *)&Cur_Param[CAPLOW1 + AddrOffset], 4);
+                    Eeprom_Write3T_MultiBytes(CAPHIGH1 + AddrOffset, (uint8_t const *)&Cur_Param[CAPHIGH1 + AddrOffset], 4);
+                    RunVarParam.CalibFlag &= ~(CALIB_CAPLOW_FLAG | CALIB_CAPHIGH_FLAG);
+                }
+                else
+                {
+                    MBASCII_SendErr(MB_EX_CALIBRATION_ERR);
+                    RunVarParam.CalibFlag &= ~(CALIB_CAPLOW_FLAG | CALIB_CAPHIGH_FLAG);
+                    return;
+                }
             }
             break;
 
@@ -989,13 +1024,37 @@ void MBASCII_Fun26(void)
           DataBuf = *(uint32_t *)&fBuf;
           break;
           
+        case 0xBC:
+          //电容下刻度标定高度值
+          fBuf = (float)ProductParam.CapLowHeight;
+          DataBuf = *(uint32_t *)&fBuf;
+          break;
+          
+        case 0xBE:
+          //电容上刻度标定高度值
+          fBuf = (float)ProductParam.CapHighHeight;
+          DataBuf = *(uint32_t *)&fBuf;
+          break;
+          
+        case 0xC0:
+          //电容下刻度标定电容值
+          fBuf = (float)ProductParam.CapLow;
+          DataBuf = *(uint32_t *)&fBuf;
+          break;
+          
+        case 0xC2:
+          //电容上刻度标定电容值
+          fBuf = (float)ProductParam.CapHigh;
+          DataBuf = *(uint32_t *)&fBuf;
+          break;                  
+          
         default:
           break;
         }
         
         for(i = 4; i > 0; i--)
         {
-          SenBuf[SenBufLen++] = (uint8_t)(DataBuf >> ((i - 1)*8));
+          SenBuf[SendLen++] = (uint8_t)(DataBuf >> ((i - 1)*8));
         }
     }
 
@@ -1016,6 +1075,7 @@ void MBASCII_Fun26(void)
 
 void MBASCII_Fun27(void)
 {
+    uint8_t AddrOffset;
     uint8_t ReadAdrH;
     uint8_t ReadAdrL;
     
@@ -1141,6 +1201,28 @@ void MBASCII_Fun27(void)
         }
         RunVarParam.CapAD_ClibValue = (uint16_t)fbuf;
       }
+      break;
+      
+    case 0xBC:
+      //电容下刻度标定高度
+        fbuf = HexToFloat(&RcvBuf[7 + index]);
+        ProductParam.CapLowHeight = (uint16_t)fbuf;
+        AddrOffset = (UserParam.LiquidType - 1) * 4;                //地址随液体类型偏移
+        Cur_Param[CAPLOWHEIGHT1 + AddrOffset] = (uint16_t)fbuf >> 8;
+        Cur_Param[CAPLOWHEIGHT1 + AddrOffset + 1] = (uint16_t)fbuf & 0xFF;
+        Eeprom_Write3T_MultiBytes(CAPLOWHEIGHT1 + AddrOffset, 
+                                  (uint8_t const *)&Cur_Param[CAPLOWHEIGHT1 + AddrOffset], 2);
+      break;
+      
+    case 0xBE:
+      //电容上刻度标定高度
+        fbuf = HexToFloat(&RcvBuf[7 + index]);
+        ProductParam.CapHighHeight = (uint16_t)fbuf;
+        AddrOffset = (UserParam.LiquidType - 1) * 4;                //地址随液体类型偏移
+        Cur_Param[CAPHIGHHEIGHT1 + AddrOffset] = (uint16_t)fbuf >> 8;
+        Cur_Param[CAPHIGHHEIGHT1 + AddrOffset + 1] = (uint16_t)fbuf & 0xFF;
+        Eeprom_Write3T_MultiBytes(CAPHIGHHEIGHT1 + AddrOffset, 
+                                  (uint8_t const *)&Cur_Param[CAPHIGHHEIGHT1 + AddrOffset], 2);
       break;
       
     default:

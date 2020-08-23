@@ -219,8 +219,55 @@ void DataFilterAndOutput(void)
         PCapFilterOutPut = PCapFilterData;
     }
                                                                                 //计算电容比率
-    RunVarParam.LiquidHeightRate = (float)(PCapFilterOutPut - ProductParam.CapMin) / (float)ProductParam.CapRange;
-    RunVarParam.OneSecLiquidHeightRate = (float)(PCapAvg_OneSec - ProductParam.CapMin) / (float)ProductParam.CapRange;
+    if(ProductParam.CapLow == 0 || ProductParam.CapHigh == 0)
+    {
+        RunVarParam.LiquidHeightRate = (float)(PCapFilterOutPut - ProductParam.CapMin) / (float)ProductParam.CapRange;
+        RunVarParam.OneSecLiquidHeightRate = (float)(PCapAvg_OneSec - ProductParam.CapMin) / (float)ProductParam.CapRange;
+    }
+    else
+    {
+        if(ProductParam.CapMin > PCapFilterOutPut)
+        {
+            RunVarParam.LiquidHeight = 0;
+            RunVarParam.OneSecLiquidHeightRate = 0;
+            RunVarParam.LiquidHeightRate = 0.0;
+            RunVarParam.OneSecLiquidHeightRate = 0.0;
+        }
+        else if(ProductParam.CapMin <= PCapFilterOutPut && ProductParam.CapLow > PCapFilterOutPut)
+        {
+            Rate = (float)(PCapFilterOutPut - ProductParam.CapMin) / (float)(ProductParam.CapLow - ProductParam.CapMin);            
+            RunVarParam.LiquidHeight = Rate * ProductParam.CapLowHeight;
+            Rate = (float)(PCapAvg_OneSec - ProductParam.CapMin) / (float)(ProductParam.CapLow - ProductParam.CapMin);
+            RunVarParam.OneSecLiquidHeight = Rate * ProductParam.CapLowHeight;
+            RunVarParam.LiquidHeightRate = (float)RunVarParam.LiquidHeight / (float)ProductParam.HeightRange;
+            RunVarParam.OneSecLiquidHeightRate = (float)RunVarParam.OneSecLiquidHeight / (float)ProductParam.HeightRange;
+        }
+        else if(ProductParam.CapLow <= PCapFilterOutPut && ProductParam.CapHigh > PCapFilterOutPut)
+        {
+            Rate = (float)(PCapFilterOutPut - ProductParam.CapLow) / (float)(ProductParam.CapHigh - ProductParam.CapLow);            
+            RunVarParam.LiquidHeight = Rate * (ProductParam.CapHighHeight - ProductParam.CapLowHeight) + ProductParam.CapLowHeight;
+            Rate = (float)(PCapAvg_OneSec - ProductParam.CapLow) / (float)(ProductParam.CapHigh - ProductParam.CapLow);
+            RunVarParam.OneSecLiquidHeight = Rate * (ProductParam.CapHighHeight - ProductParam.CapLowHeight) + ProductParam.CapLowHeight;
+            RunVarParam.LiquidHeightRate = (float)RunVarParam.LiquidHeight / (float)ProductParam.HeightRange;
+            RunVarParam.OneSecLiquidHeightRate = (float)RunVarParam.OneSecLiquidHeight / (float)ProductParam.HeightRange;
+        }
+        else if(ProductParam.CapHigh <= PCapFilterOutPut && ProductParam.CapMax > PCapFilterOutPut)
+        {
+            Rate = (float)(PCapFilterOutPut - ProductParam.CapHigh) / (float)(ProductParam.CapMax - ProductParam.CapHigh);            
+            RunVarParam.LiquidHeight = Rate * (ProductParam.HeightRange - ProductParam.CapHighHeight) + ProductParam.CapHighHeight;
+            Rate = (float)(PCapAvg_OneSec - ProductParam.CapHigh) / (float)(ProductParam.CapMax - ProductParam.CapHigh);
+            RunVarParam.OneSecLiquidHeight = Rate * (ProductParam.HeightRange - ProductParam.CapHighHeight) + ProductParam.CapHighHeight;
+            RunVarParam.LiquidHeightRate = (float)RunVarParam.LiquidHeight / (float)ProductParam.HeightRange;
+            RunVarParam.OneSecLiquidHeightRate = (float)RunVarParam.OneSecLiquidHeight / (float)ProductParam.HeightRange;
+        }
+        else if(ProductParam.CapMax < PCapFilterOutPut)
+        {        
+            RunVarParam.LiquidHeight = ProductParam.HeightRange;
+            RunVarParam.OneSecLiquidHeight = ProductParam.HeightRange;
+            RunVarParam.LiquidHeightRate = 1.0;
+            RunVarParam.OneSecLiquidHeightRate = 1.0;
+        }
+    }
     if(1.0 < RunVarParam.LiquidHeightRate)                                      //滤波电容比率限位
     {
         RunVarParam.LiquidHeightRate = 1.0;
@@ -240,8 +287,11 @@ void DataFilterAndOutput(void)
                                                                                 //转换成0--65535范围内的AD值
     RunVarParam.LiquidHeightAD = (uint16_t)(RunVarParam.LiquidHeightRate * 65535);
                                                                                 //转换成液位高度
-    RunVarParam.LiquidHeight = (float)(RunVarParam.LiquidHeightRate * ProductParam.HeightRange);
-    RunVarParam.OneSecLiquidHeight = (float)(RunVarParam.OneSecLiquidHeightRate * ProductParam.HeightRange);
+    if(ProductParam.CapLow == 0 || ProductParam.CapHigh == 0)
+    {
+        RunVarParam.LiquidHeight = (float)(RunVarParam.LiquidHeightRate * ProductParam.HeightRange);
+        RunVarParam.OneSecLiquidHeight = (float)(RunVarParam.OneSecLiquidHeightRate * ProductParam.HeightRange);
+    }
     
     if(fabs(RunVarParam.LiquidHeight - RunVarParam.OneSecLiquidHeight) < 1.5f)  //每秒的液位高度和最终液位高度差3mm以内开始上传数据
     {

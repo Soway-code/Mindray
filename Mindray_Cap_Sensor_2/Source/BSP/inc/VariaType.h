@@ -93,6 +93,11 @@ typedef struct
   //uint32_t CapMaxBak;                                                         //电容满量程备份
   uint32_t CapRange;                                                            //电容量程
   //uint32_t CapWaveLimit;                                                      //电容波动限定值
+  uint32_t CapLow;                                                              //电容下刻度
+  uint32_t CapHigh;                                                             //电容上刻度
+  
+  uint32_t CapLowHeight;                                                        //电容下刻度标定高度
+  uint32_t CapHighHeight;                                                       //电容上刻度标定高度
   
   uint16_t HeightRange;                                                         //高度量程
   

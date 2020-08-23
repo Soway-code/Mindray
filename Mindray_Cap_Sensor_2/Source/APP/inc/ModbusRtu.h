@@ -62,8 +62,10 @@
 #define MB_REQ_FAILURE                    0x80                                  //Modbus请求错误
 
 #define CALIB_CAPMIN_FLAG                 0x01                                  //标定电容零点标志
-#define CALIB_CAPMAX_FLAG                 0x10                                  //标定电容满度标志
-#define CALIB_CAPEOC_FLAG                 0x11                                  //标点电容结束标志
+#define CALIB_CAPLOW_FLAG                 0x02                                  //标定电容下刻度标志
+#define CALIB_CAPHIGH_FLAG                0x10                                  //标定电容上刻度标志
+#define CALIB_CAPMAX_FLAG                 0x20                                  //标定电容满度标志
+#define CALIB_CAPEOC_FLAG                 0x33                                  //标点电容结束标志
 
 #define CALIB_CAPADMIN_FLAG               0x01                                  //标定电容AD零点标志
 #define CALIB_CAPADLOW_FLAG               0x02                                  //标定电容AD下刻度标志

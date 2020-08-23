@@ -23,9 +23,9 @@
 
 if ($debugfile -eq "")
 {
-& "D:\Program Files (x86)\IAR Systems\Embedded Workbench 8.4\common\bin\cspybat" -f "E:\工作文件夹\我的文件\Project\迈瑞电容 V1.1.7(修改了不能读版本BUG)\Project\settings\CapacitiveSensor.Debug.general.xcl" --backend -f "E:\工作文件夹\我的文件\Project\迈瑞电容 V1.1.7(修改了不能读版本BUG)\Project\settings\CapacitiveSensor.Debug.driver.xcl" 
+& "D:\Program Files (x86)\IAR Systems\Embedded Workbench 8.4\common\bin\cspybat" -f "E:\Mindray_V1_1_7(4_dot_Collect)\Project\settings\CapacitiveSensor.Debug.general.xcl" --backend -f "E:\Mindray_V1_1_7(4_dot_Collect)\Project\settings\CapacitiveSensor.Debug.driver.xcl" 
 }
 else
 {
-& "D:\Program Files (x86)\IAR Systems\Embedded Workbench 8.4\common\bin\cspybat" -f "E:\工作文件夹\我的文件\Project\迈瑞电容 V1.1.7(修改了不能读版本BUG)\Project\settings\CapacitiveSensor.Debug.general.xcl" --debug_file=$debugfile --backend -f "E:\工作文件夹\我的文件\Project\迈瑞电容 V1.1.7(修改了不能读版本BUG)\Project\settings\CapacitiveSensor.Debug.driver.xcl" 
+& "D:\Program Files (x86)\IAR Systems\Embedded Workbench 8.4\common\bin\cspybat" -f "E:\Mindray_V1_1_7(4_dot_Collect)\Project\settings\CapacitiveSensor.Debug.general.xcl" --debug_file=$debugfile --backend -f "E:\Mindray_V1_1_7(4_dot_Collect)\Project\settings\CapacitiveSensor.Debug.driver.xcl" 
 }

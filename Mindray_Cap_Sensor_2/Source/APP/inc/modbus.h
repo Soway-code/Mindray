@@ -64,7 +64,7 @@
 #define ASCII_INPUT_REG_REGION2_END           		0x84//输入寄存器段2结束地址
 
 #define ASCII_SINGLE_COIL_ADDR_BGEIN          		0x50//单个寄存器起始地址
-#define ASCII_SINGLE_COIL_ADDR_END            		0x53//单个寄存器结束地址
+#define ASCII_SINGLE_COIL_ADDR_END            		0x54//单个寄存器结束地址
 
 #define ASCII_SPECICAL_COIL_REGION1_BGEIN    		0x00//特殊寄存器段1起始地址
 #define ASCII_SPECICAL_COIL_REGION1_END      		0x03//特殊寄存器段1结束地址
@@ -85,7 +85,7 @@
 #define ASCII_DB_HOLD_REG_REGION2_BEGIN                 0x80//双个寄存器段2起始地址
 #define ASCII_DB_HOLD_REG_REGION2_END                   0x96//双个寄存器段2结束地址
 #define ASCII_DB_HOLD_REG_REGION3_BEGIN                 0xB0//双个寄存器段3起始地址
-#define ASCII_DB_HOLD_REG_REGION3_END                   0xB6//双个寄存器段3结束地址
+#define ASCII_DB_HOLD_REG_REGION3_END                   0xC2//双个寄存器段3结束地址
 
 #define ASCII_PRODUCTION_INF_BEGIN                      0xE0//产品版本信息段起始地址
 #define ASCII_PRODUCTION_INF_END                        0xE5//产品版本信息段结束地址

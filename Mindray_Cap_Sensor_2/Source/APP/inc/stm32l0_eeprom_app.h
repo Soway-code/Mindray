@@ -33,16 +33,26 @@
 
 #define LIQUIDTYPE                        (OUTPUTMODE    + 0x01)                //介质（麻药类型）    
 #define HEIGHTRANGE                       (LIQUIDTYPE    + 0x01)                //量程
-#define CAPMIN1                           (HEIGHTRANGE   + 0x02)                //零点电容
-#define CAPMAX1                           (CAPMIN1       + 0x04)                //满量程电容
-#define CAPMIN2                           (CAPMAX1       + 0x04)                //零点电容
-#define CAPMAX2                           (CAPMIN2       + 0x04)                //满量程电容
-#define CAPMIN3                           (CAPMAX2       + 0x04)                //零点电容
-#define CAPMAX3                           (CAPMIN3       + 0x04)                //满量程电容
-#define CAPMIN4                           (CAPMAX3       + 0x04)                //零点电容
-#define CAPMAX4                           (CAPMIN4       + 0x04)                //满量程电容
-#define CAPMIN5                           (CAPMAX4       + 0x04)                //零点电容
-#define CAPMAX5                           (CAPMIN5       + 0x04)                //满量程电容
+#define CAPMIN1                           (HEIGHTRANGE   + 0x02)                //零点电容1
+#define CAPLOW1                           (CAPMIN1       + 0x04)                //下刻度电容1
+#define CAPHIGH1                          (CAPLOW1       + 0x04)                //上刻度电容1
+#define CAPMAX1                           (CAPHIGH1      + 0x04)                //满量程电容1
+#define CAPMIN2                           (CAPMAX1       + 0x04)                //零点电容2
+#define CAPLOW2                           (CAPMIN2       + 0x04)                //下刻度电容2
+#define CAPHIGH2                          (CAPLOW2       + 0x04)                //上刻度电容2
+#define CAPMAX2                           (CAPHIGH2      + 0x04)                //满量程电容2
+#define CAPMIN3                           (CAPMAX2       + 0x04)                //零点电容3
+#define CAPLOW3                           (CAPMIN3       + 0x04)                //下刻度电容3
+#define CAPHIGH3                          (CAPLOW3       + 0x04)                //上刻度电容3
+#define CAPMAX3                           (CAPHIGH3      + 0x04)                //满量程电容3
+#define CAPMIN4                           (CAPMAX3       + 0x04)                //零点电容4
+#define CAPLOW4                           (CAPMIN4       + 0x04)                //下刻度电容4
+#define CAPHIGH4                          (CAPLOW4       + 0x04)                //上刻度电容4
+#define CAPMAX4                           (CAPHIGH4      + 0x04)                //满量程电容4
+#define CAPMIN5                           (CAPMAX4       + 0x04)                //零点电容5
+#define CAPLOW5                           (CAPMIN5       + 0x04)                //下刻度电容5
+#define CAPHIGH5                          (CAPLOW5       + 0x04)                //上刻度电容5
+#define CAPMAX5                           (CAPHIGH5      + 0x04)                //满量程电容5
 #define CAPADMIN                          (CAPMAX5       + 0x04)                //电容零点AD值
 #define CAPADLOW                          (CAPADMIN      + 0x02)                //电容下刻度AD值
 #define CAPADHIH                          (CAPADLOW      + 0x02)                //电容上刻度AD值
@@ -57,7 +67,17 @@
 #define CORRECT_B                         (CORRECT_K     + 0x02)                //电容修正系数B
 #define TEMPER_K1                         (CORRECT_B     + 0x02)                //温度1修正系数K1
 #define TEMPER_B1                         (TEMPER_K1     + 0x02)                //温度1修正系数B1
-#define CAP_EMPTY                         (TEMPER_B1     + 0x04)                //空电容              
+#define CAPLOWHEIGHT1                     (TEMPER_B1     + 0x02)                //下刻度标定高度1
+#define CAPHIGHHEIGHT1                    (CAPLOWHEIGHT1 + 0x02)                //上刻度标定高度1
+#define CAPLOWHEIGHT2                     (CAPHIGHHEIGHT1 + 0x02)                //下刻度标定高度2
+#define CAPHIGHHEIGHT2                    (CAPLOWHEIGHT2 + 0x02)                //上刻度标定高度2
+#define CAPLOWHEIGHT3                     (CAPHIGHHEIGHT2 + 0x02)                //下刻度标定高度3
+#define CAPHIGHHEIGHT3                    (CAPLOWHEIGHT3 + 0x02)                //上刻度标定高度3
+#define CAPLOWHEIGHT4                     (CAPHIGHHEIGHT3 + 0x02)                //下刻度标定高度4
+#define CAPHIGHHEIGHT4                    (CAPLOWHEIGHT4 + 0x02)                //上刻度标定高度4
+#define CAPLOWHEIGHT5                     (CAPHIGHHEIGHT4 + 0x02)                //下刻度标定高度5
+#define CAPHIGHHEIGHT5                    (CAPLOWHEIGHT5 + 0x02)                //上刻度标定高度5
+#define CAP_EMPTY                         (CAPHIGHHEIGHT5 + 0x02)                //空电容              
 
 #define RESET_CNT                          (CAP_EMPTY     + 0x04)                //满值报错复位次数
 

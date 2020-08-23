@@ -36,14 +36,24 @@ const uint8_t User_Default_Param[PRO_DEFAULT_LEN] =
     
     
     0x00,0x00,0x00,0x00,                                                   //零点电容值1
+    0x00,0x07,0xA1,0x20,                                                   //下刻度电容值1
+    0x00,0x0F,0x42,0x40,                                                   //上刻度电容值1
     0xFF,0xFF,0xFF,0xFF,                                                   //满量程电容值1
     0x00,0x00,0x00,0x00,                                                   //零点电容值2
+    0x00,0x07,0xA1,0x20,                                                   //下刻度电容值2
+    0x00,0x0F,0x42,0x40,                                                   //上刻度电容值2
     0xFF,0xFF,0xFF,0xFF,                                                   //满量程电容值2
     0x00,0x00,0x00,0x00,                                                   //零点电容值3
+    0x00,0x07,0xA1,0x20,                                                   //下刻度电容值3
+    0x00,0x0F,0x42,0x40,                                                   //上刻度电容值3
     0xFF,0xFF,0xFF,0xFF,                                                   //满量程电容值3
     0x00,0x00,0x00,0x00,                                                   //零点电容值4
+    0x00,0x07,0xA1,0x20,                                                   //下刻度电容值4
+    0x00,0x0F,0x42,0x40,                                                   //上刻度电容值4
     0xFF,0xFF,0xFF,0xFF,                                                   //满量程电容值4  
     0x00,0x00,0x00,0x00,                                                   //零点电容值5
+    0x00,0x07,0xA1,0x20,                                                   //下刻度电容值5
+    0x00,0x0F,0x42,0x40,                                                   //上刻度电容值5
     0xFF,0xFF,0xFF,0xFF,                                                   //满量程电容值5 
 
     0x00,0x00,                                                             //电容零点AD值
@@ -62,6 +72,18 @@ const uint8_t User_Default_Param[PRO_DEFAULT_LEN] =
     0x00,0x64,                                                             //电容修正系数B
     0x00,0x64,                                                             //温度1修正系数K1
     0x00,0x64,                                                             //温度1修正系数B1
+    
+    0x00,0x0A,                                                             //电容下刻度标定高度1
+    0x00,0x70,                                                             //电容上刻度标定高度1
+    0x00,0x0A,                                                             //电容下刻度标定高度2
+    0x00,0x70,                                                             //电容上刻度标定高度2
+    0x00,0x0A,                                                             //电容下刻度标定高度3
+    0x00,0x70,                                                             //电容上刻度标定高度3
+    0x00,0x0A,                                                             //电容下刻度标定高度4
+    0x00,0x70,                                                             //电容上刻度标定高度4
+    0x00,0x0A,                                                             //电容下刻度标定高度5
+    0x00,0x70,                                                             //电容上刻度标定高度5
+    
     0x00,0x64,0x00,0x64,                                                    //空电容（没有放入液体时的电容）                                                         
     0x00                                                                   //满值报错复位次数
 };
@@ -441,9 +463,21 @@ void Read_Device_Param(void)
     ProductParam.TempDARange = ProductParam.TempDAMax - ProductParam.TempDAMin;
     //电容零点
     
-    ProductParam.CapMin = HexToUlong(&Cur_Param[CAPMIN1 + (UserParam.LiquidType - 1) * 8]);
+    ProductParam.CapMin = HexToUlong(&Cur_Param[CAPMIN1 + (UserParam.LiquidType - 1) * 16]);
+    //电容下刻度
+    ProductParam.CapLow = HexToUlong(&Cur_Param[CAPLOW1 + (UserParam.LiquidType - 1) * 16]);
+    //电容上刻度
+    ProductParam.CapHigh = HexToUlong(&Cur_Param[CAPHIGH1 + (UserParam.LiquidType - 1) * 16]);
     //电容满点
-    ProductParam.CapMax = HexToUlong(&Cur_Param[CAPMAX1 + (UserParam.LiquidType - 1) * 8]);
+    ProductParam.CapMax = HexToUlong(&Cur_Param[CAPMAX1 + (UserParam.LiquidType - 1) * 16]);
+    
+    //电容下刻度标定高度
+    ProductParam.CapLowHeight = (uint16_t)(Cur_Param[CAPLOWHEIGHT1 + (UserParam.LiquidType - 1) * 4] << 8) 
+                                | Cur_Param[CAPLOWHEIGHT1 + (UserParam.LiquidType - 1) * 4 + 1];
+    //电容上刻度标定高度
+    ProductParam.CapHighHeight = (uint16_t)(Cur_Param[CAPHIGHHEIGHT1 + (UserParam.LiquidType - 1) * 4] << 8) 
+                                | Cur_Param[CAPHIGHHEIGHT1 + (UserParam.LiquidType - 1) * 4 + 1];
+    
     //电容零点备份
     //ProductParam.CapMinBak = HexToUlong(&Cur_Param[CAPMINBAK]);
     //电容满点备份

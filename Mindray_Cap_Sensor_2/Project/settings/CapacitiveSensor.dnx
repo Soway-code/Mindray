@@ -12,23 +12,27 @@
         <ByteLimit>50</ByteLimit>
     </Stack>
     <DebugChecksum>
-        <Checksum>1175501545</Checksum>
+        <Checksum>2144434874</Checksum>
     </DebugChecksum>
     <Exceptions>
         <StopOnUncaught>_ 0</StopOnUncaught>
         <StopOnThrow>_ 0</StopOnThrow>
     </Exceptions>
     <CodeCoverage>
-        <Enabled>_ 0</Enabled>
+        <Enabled>0</Enabled>
+        <ShowSource>0</ShowSource>
+        <HideCovered>0</HideCovered>
     </CodeCoverage>
     <CallStack>
         <ShowArgs>0</ShowArgs>
     </CallStack>
     <Disassembly>
-        <InstrCount>0</InstrCount>
         <MixedMode>1</MixedMode>
+        <InstrCount>0</InstrCount>
     </Disassembly>
     <JLinkDriver>
+        <jlinkResetStyle>12</jlinkResetStyle>
+        <jlinkResetStrategy>0</jlinkResetStrategy>
         <CStepIntDis>_ 0</CStepIntDis>
         <LeaveTargetRunning>_ 0</LeaveTargetRunning>
     </JLinkDriver>
@@ -139,13 +143,13 @@
         <CStepIntDis>_ 0</CStepIntDis>
         <LeaveTargetRunning>_ 0</LeaveTargetRunning>
     </StLinkDriver>
-    <watch_formats>
-        <Fmt0>{W}1:RunVarParam.CapBak	3	0</Fmt0>
-    </watch_formats>
     <Trace1>
         <Enabled>0</Enabled>
         <ShowSource>1</ShowSource>
     </Trace1>
+    <watch_formats>
+        <Fmt0>{W}1:RunVarParam.CapBak	3	0</Fmt0>
+    </watch_formats>
     <TermIOLog>
         <LoggingEnabled>_ 0</LoggingEnabled>
         <LogFile>_ ""</LogFile>
@@ -160,7 +164,6 @@
         <Mode>1</Mode>
         <Graph>0</Graph>
         <Symbiont>0</Symbiont>
-        <Exclusions />
     </DriverProfiling>
     <CallStackLog>
         <Enabled>0</Enabled>
@@ -175,8 +178,11 @@
         <Count>0</Count>
     </Breakpoints2>
     <Aliases>
-        <A0>_ "E:\所有程序汇总\电容\迈瑞电容\迈瑞电容\Source\APP\stm32l0_dac_app.c" ""</A0>
-        <Count>1</Count>
+        <A0>_ "E:\工作文件夹\我的文件\Project\迈瑞电容 V1.1.7(修改了不能读版本BUG,增加了4点采样)\Source\APP\main.c" ""</A0>
+        <A1>_ "E:\工作文件夹\我的文件\Project\迈瑞电容 V1.1.7(修改了不能读版本BUG,增加了4点采样)\Source\BSP\stm32l0_timer.c" ""</A1>
+        <A2>_ "E:\工作文件夹\我的文件\Project\迈瑞电容 V1.1.7(修改了不能读版本BUG,增加了4点采样)\Source\FWLIB\stm32l0xx_hal.c" ""</A2>
+        <A3>_ "E:\所有程序汇总\电容\迈瑞电容\迈瑞电容\Source\APP\stm32l0_dac_app.c" ""</A3>
+        <Count>4</Count>
         <SuppressDialog>1</SuppressDialog>
     </Aliases>
 </settings>
