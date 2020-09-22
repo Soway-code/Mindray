@@ -1,0 +1,13 @@
+"D:\Program Files (x86)\IAR Systems\Embedded Workbench 8.4\arm\bin\armproc.dll" 
+
+"D:\Program Files (x86)\IAR Systems\Embedded Workbench 8.4\arm\bin\armjlink2.dll" 
+
+"E:\Mindray_V1_1_7_manual_adjust_V2\Project\Debug\Exe\CapacitiveSensor.out" 
+
+--plugin="D:\Program Files (x86)\IAR Systems\Embedded Workbench 8.4\arm\bin\armbat.dll" 
+
+--device_macro="D:\Program Files (x86)\IAR Systems\Embedded Workbench 8.4\arm\config\debugger\ST\STM32L0xx.dmac" 
+
+
+
+
