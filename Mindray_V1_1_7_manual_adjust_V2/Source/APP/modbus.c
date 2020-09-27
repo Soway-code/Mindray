@@ -970,11 +970,7 @@ void MBASCII_Fun25(void)
         C_Current = PCap_Res_Capacitance();
         if(RunVarParam.EmptyCap < ProductParam.CapMin)
         {
-            if(abs((int32_t)RunVarParam.EmptyCap - C_Current) 
-               < ((ProductParam.CapMax - ProductParam.CapMin) * 36 / (ProductParam.HeightRange * 10))
-                && abs((int32_t)RunVarParam.EmptyCap - C_Current) 
-               > ((ProductParam.CapMax - ProductParam.CapMin) / (ProductParam.HeightRange * 10))
-                 && (abs((int32_t)RunVarParam.EmptyCap - C_Current) 
+            if((abs((int32_t)RunVarParam.EmptyCap - C_Current) 
                > (abs(RunVarParam.AdjustCap) + ((ProductParam.CapMax - ProductParam.CapMin) / (ProductParam.HeightRange * 10)))
                  || abs((int32_t)RunVarParam.EmptyCap - C_Current) 
                < (abs(RunVarParam.AdjustCap) - ((ProductParam.CapMax - ProductParam.CapMin) / (ProductParam.HeightRange * 10)))))
